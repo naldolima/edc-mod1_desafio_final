@@ -3,11 +3,11 @@ variable "aws_region" {
 }
 
 variable "lambda_function_name" {
-  default = "IGTIexecutaEMRaovivo"
+  default = "Naldolima-executaEMR"
 }
 
 variable "key_pair_name" {
-  default = "ney-igti-teste"
+  default = "naldolima-key"
 }
 
 variable "airflow_subnet_id" {
