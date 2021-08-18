@@ -3,7 +3,7 @@ resource "aws_s3_bucket_object" "job-spark" {
   key    = "emr-code/pyspark/transform_parquet.py"
   acl    = "private"
   source = "../etl/transform_parquet.py"
-  etag   = filemd5("../etl/tranform_parquet.py")
+  etag   = filemd5("../etl/transform_parquet.py")
 }
 
 resource "aws_s3_bucket_object" "emr-log" {
