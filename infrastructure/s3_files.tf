@@ -1,4 +1,4 @@
-resource "aws_s3_bucket_object" "job spark" {
+resource "aws_s3_bucket_object" "job-spark" {
   bucket = aws_s3_bucket.dl.id
   key    = "emr-code/pyspark/transform_parquet.py"
   acl    = "private"
