@@ -204,14 +204,6 @@ resource "aws_iam_policy" "glue_policy" {
                 "arn:aws:ec2:*:*:security-group/*",
                 "arn:aws:ec2:*:*:instance/*"
             ]
-        },
-        {
-          "Action": "sts:AssumeRole",
-          "Principal": {
-            "Service": "glue.amazonaws.com"
-          },
-          "Effect": "Allow",
-          "Sid": ""
         }
     ]
 }
