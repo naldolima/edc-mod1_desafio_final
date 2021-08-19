@@ -20,3 +20,8 @@ resource "aws_glue_job" "job_censo_new" {
     "--job-bookmark-option"   = "job-bookmark-enable"
     "--enable-spark-ui"       = "true"
   }
+
+   execution_property {
+    max_concurrent_runs = 1
+  }
+}
