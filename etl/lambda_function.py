@@ -33,7 +33,7 @@ def handler(event, context):
                     'Ec2KeyName': 'naldolima-key',
                     'KeepJobFlowAliveWhenNoSteps': True,
                     'TerminationProtected': False,
-                    'Ec2SubnetId': 'subnet-1df20360'
+                    'Ec2SubnetId': 'subnet-f3c65198'
                 },
 
                 Applications=[
@@ -83,7 +83,7 @@ def handler(event, context):
                 StepConcurrencyLevel=1,
                 
                 Steps=[{
-                    'Name': 'Inster Censo',
+                    'Name': 'Insert Censo',
                     'ActionOnFailure': 'CONTINUE',
                     'HadoopJarStep': {
                         'Jar': 'command-runner.jar',
