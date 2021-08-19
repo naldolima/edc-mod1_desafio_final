@@ -1,7 +1,7 @@
 resource "aws_glue_job" "job_censo_new" {
   name         = "job_name_new"
   description  = "job-desc"
-  role_arn = aws_iam_policy.glue_policy.arn
+  role_arn = aws_iam_policy.glue_role.arn
   glue_version = "2.0"
   worker_type  = "G.1X"
   number_of_workers = "4"
