@@ -83,7 +83,7 @@ def handler(event, context):
                 StepConcurrencyLevel=1,
                 
                 Steps=[{
-                    'Name': 'Delta Insert do ENEM',
+                    'Name': 'Inster Censo',
                     'ActionOnFailure': 'CONTINUE',
                     'HadoopJarStep': {
                         'Jar': 'command-runner.jar',

@@ -1,27 +1,28 @@
+from pyspark.sql.functions import mean, max, min, col, count
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, min, max
 
-# Cria objeto da Spark Session
-spark = (SparkSession.builder.appName("Spark-Desafio-Mod1")
+spark = (
+    SparkSession.builder.appName("ExerciseSpark")
     .getOrCreate()
 )
 
-# Leitura de dados
-enem = (
-    spark.read.format("csv")
-    .option("inferSchema", True)
+# Ler os dados do enem 2019
+censo = (
+    spark
+    .read
+    .format("csv")
     .option("header", True)
+    .option("inferSchema", True)
     .option("delimiter", ";")
-    .load("s3://datalake-naldolima-edc/raw-data")
+    .load("s3://datalake-naldolima-edc/raw-data/")
 )
 
-# Escreve a tabela em staging em formato parquet
-print("Writing parquet table...")
+
 (
-    enem
+    censo
     .write
     .mode("overwrite")
     .format("parquet")
     .partitionBy("year")
-    .save("s3://datalake-naldolima-edc-tf/stage-zone/censo")
+    .save("s3://datalake-naldolima-edc-tf/stage-zone")
 )
