@@ -1,15 +1,9 @@
 resource "aws_s3_bucket_object" "job-spark" {
   bucket = aws_s3_bucket.dl.id
-  key    = "emr-code/pyspark/transform_parquet.py"
+  key    = "code/pyspark/glue_spark_job.py"
   acl    = "private"
-  source = "../etl/transform_parquet.py"
-  etag   = filemd5("../etl/transform_parquet.py")
-}
-
-resource "aws_s3_bucket_object" "emr-log" {
-  bucket = aws_s3_bucket.dl.id
-  key    = "emr-log/"
-  acl    = "private"
+  source = "../etl/glue_spark_job.py"
+  etag   = filemd5("../etl/glue_spark_job.py")
 }
 
 resource "aws_s3_bucket_object" "stage-zone" {

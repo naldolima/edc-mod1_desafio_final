@@ -1,5 +1,4 @@
 resource "aws_iam_role" "lambda" {
-  #name = "IGTILambdaRole"
   name = "CustomLambdaRole"
 
   assume_role_policy = <<EOF
@@ -28,7 +27,6 @@ EOF
 
 
 resource "aws_iam_policy" "lambda" {
-  #name        = "IGTIAWSLambdaBasicExecutionRolePolicy"
   name        = "CustomAWSLambdaBasicExecutionRolePolicy"
   path        = "/"
   description = "Provides write permissions to CloudWatch Logs, S3 buckets and EMR Steps"
@@ -97,7 +95,6 @@ resource "aws_iam_role_policy_attachment" "lambda_attach" {
 ###############
 
 resource "aws_iam_role" "glue_role" {
-  #name = "IGTIGlueCrawlerRole"
   name = "CustomGlueCrawlerRole"
 
   assume_role_policy = <<EOF
@@ -125,7 +122,6 @@ EOF
 
 
 resource "aws_iam_policy" "glue_policy" {
-  #name        = "IGTIAWSGlueServiceRole"
   name        = "CustomAWSGlueServiceRole"
   path        = "/"
   description = "Policy for AWS Glue service role which allows access to related services including EC2, S3, and Cloudwatch Logs"
