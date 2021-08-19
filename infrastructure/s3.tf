@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "dl" {
   acl    = "private"
 
   tags = {
-    IES   = "IGTI",
+    IES   = "naldolima",
     CURSO = "EDC"
   }
 
