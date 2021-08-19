@@ -2,11 +2,6 @@ resource "aws_glue_job" "job_censo_new" {
   name         = "job_name"
   description  = "job-desc"
   role_arn = aws_iam_policy.glue_policy.arn
-  max_capacity = 10
-  max_retries  = 1
-  timeout      = 60
-  glue_version = "2.0"
-  worker_type  = "G.1X"
 
   command {
     script_location = "s3://code/pyspark/glue_spark_job.py"
