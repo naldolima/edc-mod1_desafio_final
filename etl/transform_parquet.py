@@ -23,6 +23,5 @@ censo = (
     .write
     .mode("overwrite")
     .format("parquet")
-    .partitionBy("year")
-    .save("s3://datalake-naldolima-edc-tf/stage-zone")
+    .save("s3://datalake-naldolima-edc-tf/stage-zone/")
 )
