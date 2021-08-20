@@ -44,7 +44,7 @@ This example presents a data pipeline from the school census 2020, considering t
 
 <!-- Markdown link & img dfn's -->
 
-[header-url]: github-template.png
+[header-url]: diagram.png
 [header-link]: https://github.com/naldolima/
 [repository-url]: https://github.com/naldolima/edc-mod1_desafio_final
 [linkedin-url]: https://www.linkedin.com/in/francinaldo-lima/
