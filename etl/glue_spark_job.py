@@ -24,8 +24,6 @@ censo = (
     .load("s3://datalake-naldolima-edc/raw-data/censo/")
 )
 
-
-
 (
     censo
     .write
