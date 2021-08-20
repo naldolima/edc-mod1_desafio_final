@@ -1,6 +1,6 @@
 resource "aws_glue_job" "job_censo_new" {
-  name         = "job_name_new"
-  description  = "job-desc"
+  name         = "job-censo"
+  description  = "job-censo escolar"
   role_arn = aws_iam_role.glue_role.arn
   glue_version = "2.0"
   worker_type  = "G.1X"
