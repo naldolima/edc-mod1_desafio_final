@@ -20,11 +20,9 @@ censo = (
     .format("csv")
     .option("header", True)
     .option("inferSchema", True)
-    .option("delimiter", ";")
+    .option("delimiter", "|")
     .load("s3://datalake-naldolima-edc/raw-data/censo/")
 )
-
-
 
 (
     censo
